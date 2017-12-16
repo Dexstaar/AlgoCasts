@@ -10,7 +10,7 @@
 function reverse(str) {
   return str
     .split("")
-    .reduce((reversed, character) => character + reversed, "");
+    .reduce((reversed, character) => character + reversed);
 }
 
 // solution 2
