@@ -9,20 +9,61 @@
 
 
 
-// solution 2
+
+
+// my solution using map
 function capitalize(str) {
-	let result = str[0].toUpperCase();
+    const result = str.split(' ').map(elem => {
+        return elem[0].toUpperCase() + elem.slice(1);
+    });
 
-	for (let i = 0; i < str.length; i++) {
-		if (str[i-1] === ' ') {
-			result += str[i].toUpperCase();
-		} eles {
-			result += str[i];
-		}
-	}
-
-	return result;
+    return result.join(' ');
 }
+
+
+// my solution using forEach
+// function capitalize(str) {
+//     const result = [];
+
+//     str.split(' ').forEach(elem => {
+//         result.push(elem[0].toUpperCase() + elem.slice(1));
+//     });
+
+//     return result.join(' ');
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// solution 2
+// function capitalize(str) {
+// 	let result = str[0].toUpperCase();
+
+// 	for (let i = 0; i < str.length; i++) {
+// 		if (str[i-1] === ' ') {
+// 			result += str[i].toUpperCase();
+// 		} eles {
+// 			result += str[i];
+// 		}
+// 	}
+
+// 	return result;
+// }
 
 
 

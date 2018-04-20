@@ -9,14 +9,35 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 
-// solution 2
+
+
+my solution 2
 function anagrams(stringA, stringB) {
-    return cleanString(stringA) === cleanString(stringB);
+
 }
 
-function cleanString(str) {
-    return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// solution 2
+// function anagrams(stringA, stringB) {
+//     return cleanString(stringA) === cleanString(stringB);
+// }
+
+// function cleanString(str) {
+//     return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
+// }
 
 
 
