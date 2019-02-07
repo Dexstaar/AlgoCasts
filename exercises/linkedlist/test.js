@@ -83,7 +83,7 @@ describe('RemoveFirst', () => {
     expect(l.getFirst()).toEqual(null);
   });
 
-  test.skip('removes the first node when the list has a size of three', () => {
+  test('removes the first node when the list has a size of three', () => {
     const l = new List();
     l.insertFirst('c');
     l.insertFirst('b');
@@ -97,7 +97,7 @@ describe('RemoveFirst', () => {
   });
 });
 
-describe.skip('RemoveLast', () => {
+describe('RemoveLast', () => {
   test('RemoveLast removes the last node when list is empty', () => {
     const l = new List();
     expect(() => {
