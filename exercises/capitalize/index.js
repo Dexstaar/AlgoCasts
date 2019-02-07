@@ -11,26 +11,23 @@
 
 
 
-// my solution using map
+// my solution 
 function capitalize(str) {
-    const result = str.split(' ').map(elem => {
-        return elem[0].toUpperCase() + elem.slice(1);
-    });
-
-    return result.join(' ');
 }
 
 
-// my solution using forEach
-// function capitalize(str) {
-//     const result = [];
 
-//     str.split(' ').forEach(elem => {
-//         result.push(elem[0].toUpperCase() + elem.slice(1));
-//     });
 
-//     return result.join(' ');
-// }
+
+
+
+
+
+
+
+
+
+
 
 
 

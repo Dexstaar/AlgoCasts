@@ -12,48 +12,74 @@
 //     q.remove(); // returns 1
 //     q.remove(); // returns 2
 
-const Stack = require('./stack');
+const Stack = require("./stack");
 
-// solution 1
 class Queue {
-    constructor() {
-        this.first = new Stack();
-        this.second = new Stack();
+  constructor() {
+    this.main = new Stack();
+    this.sub = new Stack();
+  }
+
+  add(element) {
+    while (this.main.peek()) {
+      this.sub.push(this.main.pop());
     }
 
-    add(record) {
-        this.first.push(record);
+    this.main.push(element);
+
+    while (this.sub.peek()) {
+      this.main.push(this.sub.pop());
     }
+  }
 
-    remove() {
-        while (this.first.peek()) {
-            this.second.push(this.first.pop());
-        }
+  remove() {
+    return this.main.pop();
+  }
 
-        const record = this.second.pop();
-
-        while (this.second.peek()) {
-            this.first.push(this.second.pop());
-        }
-
-        return record;
-    }
-
-    peek() {
-        while (this.first.peek()) {
-            this.second.push(this.first.pop());
-        }
-
-        const record = this.second.peek();
-
-        while (this.second.peek()) {
-            this.first.push(this.second.pop());
-        }
-
-        return record;
-    }
+  peek() {
+    return this.main.peek();
+  }
 }
 
+// solution 1
+// class Queue {
+//     constructor() {
+//         this.first = new Stack();
+//         this.second = new Stack();
+//     }
+
+//     add(record) {
+//         this.first.push(record);
+//     }
+
+//     remove() {
+//         while (this.first.peek()) {
+//             this.second.push(this.first.pop());
+//         }
+
+//         const record = this.second.pop();
+
+//         while (this.second.peek()) {
+//             this.first.push(this.second.pop());
+//         }
+
+//         return record;
+//     }
+
+//     peek() {
+//         while (this.first.peek()) {
+//             this.second.push(this.first.pop());
+//         }
+
+//         const record = this.second.peek();
+
+//         while (this.second.peek()) {
+//             this.first.push(this.second.pop());
+//         }
+
+//         return record;
+//     }
+// }
 
 // My solution
 // class Queue {

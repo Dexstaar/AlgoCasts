@@ -5,32 +5,52 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-
-// solution 1
 function maxChar(str) {
-	const charMap = {};
-	let max = 0;
-	let maxChar = '';
 
-	for(let char of str) {
-		if (charMap[char]) {
-			charMap[char]++;
-		} else {
-			charMap[char] = 1;
-		}
-	}
 
-	for (let char in charMap) {
-		if (charMap[char] > max) {
-			max = charMap[char];
-			maxChar = char;
-		}
-	}
 
-	return maxChar;
+
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// solution 1
+// function maxChar(str) {
+// 	const charMap = {};
+// 	let max = 0;
+// 	let maxChar = '';
+
+// 	for(let char of str) {
+// 		if (charMap[char]) {
+// 			charMap[char]++;
+// 		} else {
+// 			charMap[char] = 1;
+// 		}
+// 	}
+
+// 	for (let char in charMap) {
+// 		if (charMap[char] > max) {
+// 			max = charMap[char];
+// 			maxChar = char;
+// 		}
+// 	}
+
+// 	return maxChar;
+// }
 
 //my solution
 // function maxChar(str) {
@@ -43,7 +63,7 @@ function maxChar(str) {
 // 		let cnt = 0;
 // 		if(!map[elem]) {
 // 			map[elem] = 1;
-			
+
 // 		} else {
 // 			cnt = map[elem];
 // 			cnt = cnt+1;
@@ -56,7 +76,7 @@ function maxChar(str) {
 // 	str.split('').forEach(elem => {
 // 		if(map[elem] === max){
 // 			rtnVal = elem;
-// 		} 
+// 		}
 // 	});
 
 // 	return rtnVal;
