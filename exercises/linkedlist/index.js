@@ -16,6 +16,9 @@ class LinkedList {
 
   insertFirst(data) {
     this.head = new Node(data, this.head);
+
+    // Or this can be implemented by reusing of insertAt
+    // this.insertAt(data, 0);
   }
 
   size() {
@@ -32,6 +35,10 @@ class LinkedList {
 
   getFirst() {
     return this.head;
+
+    // Or this can be implemented by reusing of getAt
+    // return this.getAt(0);
+
   }
 
   getLast() {
@@ -44,6 +51,10 @@ class LinkedList {
     }
 
     return node;
+
+
+    // Or this can be implemented by reusing of getAt
+    // return this.getAt(this.size() - 1);
   }
 
   clear() {
@@ -76,7 +87,85 @@ class LinkedList {
     previous.next = null;
   }
 
+  insertLast(data) {
+    const last = this.getLast();
 
+    if (last) {
+      // There are some existing nodes in our chain
+      last.next = new Node(data);
+    } else {
+      // The chain is empty!
+      this.head = new Node(data);
+    }
+  }
+
+  getAt(index) {
+    if (!this.head) { return null; }
+
+    let counter = 0;
+    let node = this.head;
+
+    while(node) {
+      if (counter === index) {
+        return node;
+      }
+
+      counter++;
+      node = node.next;
+    }
+
+    return null;
+  }
+
+  removeAt(index) {
+    if (!this.head) { return; }
+
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+
+    const previous = this.getAt(index - 1);
+    if(!previous || !previous.next) {
+      return;
+    }
+    previous.next = previous.next.next;
+  }
+
+  insertAt(data, index) {
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+
+    const previous = this.getAt(index - 1) || this.getLast();
+    const node = new Node(data, previous.next);
+    previous.next = node;
+  }
+
+  forEach(fn) {
+    let node = this.head;
+    let counter = 0;
+
+    while (node) {
+      fn(node, counter);
+      node = node.next;
+      counter++;
+    }
+  }
+
+  *[Symbol.iterator]() {
+    let node = this.head;
+    while (node) {
+      yield node;
+      node = node.next;
+    }
+  }
 }
 
 

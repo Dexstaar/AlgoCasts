@@ -6,10 +6,6 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-
-
-
-
 }
 
 

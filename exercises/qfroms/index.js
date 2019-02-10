@@ -15,31 +15,22 @@
 const Stack = require("./stack");
 
 class Queue {
-  constructor() {
-    this.main = new Stack();
-    this.sub = new Stack();
-  }
-
-  add(element) {
-    while (this.main.peek()) {
-      this.sub.push(this.main.pop());
-    }
-
-    this.main.push(element);
-
-    while (this.sub.peek()) {
-      this.main.push(this.sub.pop());
-    }
-  }
-
-  remove() {
-    return this.main.pop();
-  }
-
-  peek() {
-    return this.main.peek();
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // solution 1
 // class Queue {
