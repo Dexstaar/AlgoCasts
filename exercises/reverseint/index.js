@@ -10,11 +10,11 @@
 
 
 
-//My Solution 2
+//1가지 방법
 function reverseInt(n) {
-    const reversed = n.toString().split('').reverse().join('');
+    const reversedStr = n.toString().split('').reverse().join('');
 
-    return parseInt(reversed) * Math.sign(n);
+    return parseInt(reversedStr) * Math.sign(n);
 }
 
 

@@ -10,12 +10,13 @@
 
 
 
-// my Solution 2
+// 2가지
 function palindrome(str) {
-    return str.split('').every((elem, i) => {
-        return elem === str[str.length-i-1];
-    });
 }
+
+
+
+
 
 
 

@@ -6,8 +6,17 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+// 3가지 방법
 function reverse(str) {
 }
+
+
+
+
+
+
+
+
 
 
 
