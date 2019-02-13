@@ -9,12 +9,18 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 
+// str.replace(/[^\w]/g, '')
 
-
-my solution 2
 function anagrams(stringA, stringB) {
-
+  
 }
+
+
+
+
+
+
+
 
 
 

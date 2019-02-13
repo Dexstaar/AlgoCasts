@@ -24,10 +24,6 @@ function maxChar(str) {
 
 
 
-
-
-
-
 // solution 1
 // function maxChar(str) {
 // 	const charMap = {};

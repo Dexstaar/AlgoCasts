@@ -135,7 +135,7 @@ describe('RemoveLast', () => {
   });
 });
 
-describe.skip('InsertLast', () => {
+describe('InsertLast', () => {
   test('adds to the end of the list', () => {
     const l = new List();
     l.insertFirst('a');
@@ -147,7 +147,7 @@ describe.skip('InsertLast', () => {
   });
 });
 
-describe.skip('GetAt', () => {
+describe('GetAt', () => {
   test('returns the node at given index', () => {
     const l = new List();
     expect(l.getAt(10)).toEqual(null);
@@ -164,7 +164,7 @@ describe.skip('GetAt', () => {
   });
 });
 
-describe.skip('RemoveAt', () => {
+describe('RemoveAt', () => {
   test('removeAt doesnt crash on an empty list', () => {
     const l = new List();
     expect(() => {
@@ -174,7 +174,7 @@ describe.skip('RemoveAt', () => {
     }).not.toThrow();
   });
 
-  test.skip('removeAt doesnt crash on an index out of bounds', () => {
+  test('removeAt doesnt crash on an index out of bounds', () => {
     const l = new List();
     expect(() => {
       const l = new List();
@@ -183,7 +183,7 @@ describe.skip('RemoveAt', () => {
     }).not.toThrow();
   });
 
-  test.skip('removeAt deletes the first node', () => {
+  test('removeAt deletes the first node', () => {
     const l = new List();
     l.insertLast(1);
     l.insertLast(2);
@@ -194,7 +194,7 @@ describe.skip('RemoveAt', () => {
     expect(l.getAt(0).data).toEqual(2);
   });
 
-  test.skip('removeAt deletes the node at the given index', () => {
+  test('removeAt deletes the node at the given index', () => {
     const l = new List();
     l.insertLast(1);
     l.insertLast(2);
@@ -205,7 +205,7 @@ describe.skip('RemoveAt', () => {
     expect(l.getAt(1).data).toEqual(3);
   });
 
-  test.skip('removeAt works on the last node', () => {
+  test('removeAt works on the last node', () => {
     const l = new List();
     l.insertLast(1);
     l.insertLast(2);
@@ -217,14 +217,14 @@ describe.skip('RemoveAt', () => {
   });
 });
 
-describe.skip('InsertAt', () => {
+describe('InsertAt', () => {
   test('inserts a new node with data at the 0 index when the list is empty', () => {
     const l = new List();
     l.insertAt('hi', 0);
     expect(l.getFirst().data).toEqual('hi');
   });
 
-  test.skip('inserts a new node with data at the 0 index when the list has elements', () => {
+  test('inserts a new node with data at the 0 index when the list has elements', () => {
     const l = new List();
     l.insertLast('a');
     l.insertLast('b');
@@ -236,7 +236,7 @@ describe.skip('InsertAt', () => {
     expect(l.getAt(3).data).toEqual('c');
   });
 
-  test.skip('inserts a new node with data at a middle index', () => {
+  test('inserts a new node with data at a middle index', () => {
     const l = new List();
     l.insertLast('a');
     l.insertLast('b');
@@ -250,7 +250,7 @@ describe.skip('InsertAt', () => {
     expect(l.getAt(4).data).toEqual('d');
   });
 
-  test.skip('inserts a new node with data at a last index', () => {
+  test('inserts a new node with data at a last index', () => {
     const l = new List();
     l.insertLast('a');
     l.insertLast('b');
@@ -260,7 +260,7 @@ describe.skip('InsertAt', () => {
     expect(l.getAt(2).data).toEqual('hi');
   });
 
-  test.skip('insert a new node when index is out of bounds', () => {
+  test('insert a new node when index is out of bounds', () => {
     const l = new List();
     l.insertLast('a');
     l.insertLast('b');
@@ -272,7 +272,7 @@ describe.skip('InsertAt', () => {
   });
 });
 
-describe.skip('ForEach', () => {
+describe('ForEach', () => {
   test('applies a transform to each node', () => {
     const l = new List();
 
@@ -292,7 +292,7 @@ describe.skip('ForEach', () => {
   });
 });
 
-describe.skip('for...of loops', () => {
+describe('for...of loops', () => {
   test('works with the linked list', () => {
     const l = new List();
 
@@ -311,7 +311,7 @@ describe.skip('for...of loops', () => {
     expect(l.getAt(3).data).toEqual(14);
   });
 
-  test.skip('for...of works on an empty list', () => {
+  test('for...of works on an empty list', () => {
     const l = new List();
     expect(() => {
       for (let node of l) {
